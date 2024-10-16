@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký tài khoản</title>
+    <style>
+      body {
+        background-image: url("IMAGES/BG-2.png");
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+      }
+
+      h4 {
+        color: #006699;
+        font-size: 18pt;
+      }
+
+      .register-box {
+        background-color: white;
+        padding: 30px;
+        width: 60%;
+        max-width: 500px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        margin: 0 auto;
+        padding: 20px;
+        border: none;
+        width: 100%;
+      }
+
+      td {
+        padding: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[list] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"],
+      button {
+        background-color: #006699;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover,
+      button:hover {
+        background-color: #005580;
+      }
+
+      a {
+        color: #006699;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: 1px solid #000099;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="register-box">
+      <h4>Đăng ký tài khoản mới</h4>
+
+      <hr />
+
+      <form action="dangky.html" method="post">
+        <table>
+          <tr>
+            <td><label for="lastName">Họ:</label></td>
+            <td>
+              <input type="text" id="lastName" name="lastName" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="firstName">Tên:</label></td>
+            <td>
+              <input type="text" id="firstName" name="firstName" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Nhập lại mật khẩu:</label></td>
+            <td>
+              <input type="password" id="password" name="password" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">Ngày tháng năm sinh:</label></td>
+            <td>
+              <input type="date" id="dob" name="dob" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="province">Tỉnh thành:</label></td>
+            <td>
+              <input list="provinces" id="province" name="province" required />
+              <datalist id="provinces">
+                <option value="Hà Nội"></option>
+                <option value="Hồ Chí Minh"></option>
+                <option value="Đà Nẵng"></option>
+                <option value="Hải Phòng"></option>
+                <option value="Cần Thơ">
+                  <!-- Add more options as needed -->
+                </option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Giới tính:</label></td>
+            <td>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                required
+              />
+              <label for="male">Nam</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Nữ</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center">
+              <button type="submit">Đăng ký</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <hr />
+
+      <p>
+        <a href="INDEX.BAI07.html">Trở lại đăng nhập</a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập hệ thống</title>
+    <style>
+      body {
+        background-image: url("IMAGES/BG-2.png");
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+      }
+
+      h4 {
+        color: #006699;
+        font-size: 18pt;
+      }
+
+      .login-box {
+        background-color: white;
+        padding: 30px;
+        width: 60%;
+        max-width: 500px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        margin: 0 auto;
+        padding: 20px;
+        border: none;
+        width: 100%;
+      }
+
+      td {
+        padding: 10px;
+        font-size: 14pt;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        background-color: #006699;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #005580;
+      }
+
+      a {
+        color: #006699;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: 1px solid #000099;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <h4>Đăng nhập hệ thống</h4>
+
+      <hr />
+      <form action="dangnhap.html" method="post">
+        <table>
+          <tr>
+            <td><label for="username">Tên đăng nhập:</label></td>
+            <td>
+              <input type="text" id="username" name="username" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Mật khẩu:</label></td>
+            <td>
+              <input type="password" id="password" name="password" required />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center">
+              <input type="submit" value="Đăng nhập" />
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <hr />
+
+      <p>
+        <a href="quenmatkhau.html">Quên mật khẩu</a> |
+        <a href="dangky.html">Đăng ký</a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quên mật khẩu</title>
+    <style>
+      body {
+        background-image: url("IMAGES/BG-2.png");
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+      }
+
+      h4 {
+        color: #006699;
+        font-size: 18pt;
+      }
+
+      .forgot-password-box {
+        background-color: white;
+        padding: 30px;
+        width: 60%;
+        max-width: 500px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"],
+      input[type="submit"] {
+        width: 80%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        background-color: #006699;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #005580;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+
+      a {
+        color: #006699;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: 1px solid #000099;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="forgot-password-box">
+      <h4>Quên mật khẩu</h4>
+
+      <hr />
+
+      <form action="quenmatkhau.html" method="post">
+        <p>Nhập địa chỉ email để nhận liên kết đặt lại mật khẩu:</p>
+        <input type="text" name="email" placeholder="Địa chỉ email" required />
+        <br />
+        <input type="submit" value="Gửi liên kết đặt lại mật khẩu" />
+      </form>
+
+      <hr />
+
+      <p>
+        <a href="INDEX.BAI07.html">Trở lại đăng nhập</a>
+      </p>
+    </div>
+  </body>
+</html>

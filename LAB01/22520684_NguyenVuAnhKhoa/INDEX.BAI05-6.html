@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Player</title>
+
+    <style>
+      body {
+        background-image: url("IMAGES/BG-2.png");
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24pt;
+        margin-bottom: 20px;
+      }
+
+      section {
+        margin: 20px auto;
+        padding: 20px;
+        width: 80%;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+      }
+
+      h2 {
+        font-size: 18pt;
+        margin-bottom: 10px;
+      }
+
+      video,
+      audio {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      input[type="file"] {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Media Player</h1>
+    <section id="video-section">
+      <h2>Video Player</h2>
+      <input type="file" id="videoFileInput" accept="video/*" />
+      <video id="videoPlayer" controls></video>
+    </section>
+
+    <section id="audio-section">
+      <h2>Audio Player</h2>
+      <input type="file" id="audioFileInput" accept="audio/*" />
+      <audio id="audioPlayer" controls></audio>
+    </section>
+
+    <script>
+      const videoInput = document.getElementById("videoFileInput");
+      const videoPlayer = document.getElementById("videoPlayer");
+
+      videoInput.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          const fileURL = URL.createObjectURL(file);
+          videoPlayer.src = fileURL;
+        }
+      });
+
+      const audioInput = document.getElementById("audioFileInput");
+      const audioPlayer = document.getElementById("audioPlayer");
+
+      audioInput.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          const fileURL = URL.createObjectURL(file);
+          audioPlayer.src = fileURL;
+        }
+      });
+    </script>
+  </body>
+</html>

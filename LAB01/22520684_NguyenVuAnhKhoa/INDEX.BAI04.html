@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Specifications</title>
+    <style>
+      body {
+        background-image: url("IMAGES/BG-1.jpg");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* NOS CROLL */
+      }
+
+      .content-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        background-color: white; /* WHITE BOX -> HIGHLIGHTING */
+        padding: 20px;
+        border-radius: 10px; /* SMOOTHED CORNERS */
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* SHADOW */
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px; /*ADD SPACE */
+      }
+
+      table {
+        width: 100%;
+        background-color: #ffccff;
+        font-size: 10pt;
+        margin-top: 20px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        font-weight: bold;
+        text-align: left;
+        border: 1px solid #ccc;
+      }
+
+      th {
+        color: #3300ff;
+        background-color: #e6e6ff;
+      }
+
+      tr:nth-child(4),
+      tr:nth-child(6),
+      tr:nth-child(8) {
+        background-color: #ccffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- WRAPPER -> FIT CONTENT-->
+    <div class="content-wrapper">
+      <img src="IMAGES/MAC-PIC.jpg" alt="Mac Picture" />
+      <h2>Các thông số kỹ thuật</h2>
+      <table>
+        <tr>
+          <th>Tên Linh Kiện</th>
+          <th>Thông Số</th>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td>Intel, Core i5 Haswell</td>
+        </tr>
+        <tr>
+          <td>RAM</td>
+          <td>DDR3L, 8 GB</td>
+        </tr>
+        <tr>
+          <td>Ổ cứng</td>
+          <td>SSD, 512 GB</td>
+        </tr>
+        <tr>
+          <td>Màn hình rộng</td>
+          <td>13.3 inch</td>
+        </tr>
+        <tr>
+          <td>HĐH theo máy</td>
+          <td>Mac OS X</td>
+        </tr>
+        <tr>
+          <td>Đồ họa</td>
+          <td>Intel® Iris™ Pro 5200 (shared)</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
