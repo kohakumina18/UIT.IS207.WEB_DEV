@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Form Example</title>
+    <style>
+      body {
+        background-image: url("IMAGES/BG-1.jpg");
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+
+      .formContainer {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #f9f9f9;
+      }
+
+      .inputField {
+        width: 200px;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      .button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .button:hover {
+        background-color: #a0ac24;
+      }
+    </style>
+  </head>
+  <body>
+    <h2></h2>
+    <button class="toggleButton button">NEW</button>
+
+    <div class="formContainer">
+      <h3>Enter User Details</h3>
+      <form class="userForm">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          class="inputField"
+          name="username"
+          placeholder="Enter Username"
+          required
+        /><br />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          class="inputField"
+          name="password"
+          placeholder="Enter Password"
+          required
+        /><br />
+
+        <button type="button" class="button" onclick="addUser()">Add</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementsByClassName("toggleButton")[0]
+        .addEventListener("click", function () {
+          var formContainer =
+            document.getElementsByClassName("formContainer")[0];
+          if (
+            formContainer.style.display === "none" ||
+            formContainer.style.display === ""
+          ) {
+            formContainer.style.display = "block";
+          } else {
+            formContainer.style.display = "none";
+          }
+        });
+
+      function addUser() {
+        var username = document.getElementsByClassName("inputField")[0].value;
+        var password = document.getElementsByClassName("inputField")[1].value;
+
+        if (username && password) {
+          alert("User added: " + username);
+          document.getElementsByClassName("formContainer")[0].style.display =
+            "none";
+        } else {
+          alert("Please enter both username and password.");
+        }
+      }
+    </script>
+  </body>
+</html>
